@@ -1,82 +1,90 @@
 <configuration plugin="admin">
 	<settings name="commands">
+		<!-- #Administrators# -->
 		<set name="enable">100</set>
 		<set name="disable">100</set>
 		<set name="die">100</set>
 		<set name="reconfig">100</set>
 		<set name="restart">100</set>
-		<set name="mask">100</set>
-		<set name="unmask">100</set>
+		<set name="pause">100</set>
+		<set name="rebuild">100</set>
+
 		<set name="runas-su">100</set>
+		<set name="makereg-mr">100</set>
+		<set name="putgroup">100</set>
+		<set name="ungroup">100</set>
 
-		<set name="pause">90</set>
-		<set name="rebuild">90</set>
-		<set name="clientinfo">90</set>
-		<set name="putgroup">90</set>
-		<set name="ungroup">90</set>
+		<!-- #Server Administrators# -->
+		<set name="map">60</set>
+		<set name="maprotate">60</set>
+		<set name="pbss">60</set>
+		<set name="mask">60</set>
+		<set name="unmask">60</set>
 
-		<set name="permban-pb">80</set>
-		<set name="map">80</set>
-		<set name="maprotate">80</set>
-		<set name="warnclear-wc">80</set>
-		<set name="clear-kiss">80</set>
-		<set name="lookup-l">80</set>
-		<set name="makereg-mr">80</set>
-		<set name="spankall-sall">80</set>
-		<set name="banall-ball">80</set>
-		<set name="kickall-kall">80</set>
-		<set name="pbss">80</set>
-
-		<set name="ban-b">60</set>
 		<set name="unban">60</set>
-		<set name="spank-sp">60</set>
+		<set name="clear-kiss">60</set>
+		<set name="spankall-sall">60</set>
+		<set name="banall-ball">60</set>
+		<set name="kickall-kall"60</set>
 
-		<set name="tempban-tb">40</set>
-		<set name="baninfo-bi">40</set>
-		<set name="kick-k">40</set>
-		<set name="admintest">40</set>
-		<set name="scream">40</set>
-		<set name="notice">40</set>
+		<!-- #Senior Moderators# -->
+		<set name="ban-b">40</set>
+		<set name="permban-pb">40</set>
+		<set name="warnclear-wc">40</set>
 
-		<set name="find">20</set>
-		<set name="aliases-alias">20</set>
+		<!-- Moderators -->
+		<set name="tempban-tb">20</set>
+		<set name="baninfo-bi">20</set>
+		<set name="kick-k">20</set>
+		<set name="spank-sp">20</set>
+		<set name="warnremove-wr">20</set>
+
+		<set name="admintest">20</set>
+		<set name="scream">20</set>
+		<set name="notice">20</set>
+		<set name="clientinfo">20</set>
 		<set name="warns">20</set>
 		<set name="warninfo-wi">20</set>
-		<set name="warnremove-wr">20</set>
 		<set name="warn-w">20</set>
 		<set name="warntest-wt">20</set>
+
+		<set name="lookup-l">20</set>
+		<set name="leveltest-lt">20</set>
+		<set name="find">20</set>
+		<set name="aliases-alias">20</set>
 		<set name="spams">20</set>
 		<set name="spam-s">20</set>
 		<set name="list">20</set>
-		<set name="admins">20</set>
 		<set name="say">20</set>
 		<set name="status">20</set>
-		<set name="leveltest-lt">20</set>
 		<set name="poke">20</set>
 
-		<set name="b3">9</set>
+		<!-- #EHD Members# -->
+		<set name="b3">10</set>
+		<set name="seen">10</set>
 
-		<set name="seen">2</set>
-		<set name="maps">2</set>
-		<set name="nextmap">2</set>
-
+		<!-- #Users# -->
+		<set name="maps">1</set>
+		<set name="nextmap">1</set>
+		<set name="admins">1</set>
 		<set name="regtest">1</set>
 		<set name="time">1</set>
 
+		<!-- #Unregistered# -->
 		<set name="help-h">0</set>
-		<set name="register">0</set>
+		<set name="register">0-0</set>
 		<set name="rules-r">0</set>
 	</settings>
 	<settings name="settings">
     <!-- noreason_level : admin from this level are not required to specify a reason when giving penalties to players -->
-		<set name="noreason_level">100</set>
+		<set name="noreason_level">80</set>
 		<!-- hidecmd_level : level required to be able to use hidden commands. On quake3 based games, a hidden command can be issued by 
 		telling to command to oneself -->
 		<set name="hidecmd_level">60</set>
 		<!-- long_tempban_level : admin level required to be able to issue bans longer than long_tempban_max_duration -->
-		<set name="long_tempban_level">80</set>
+		<set name="long_tempban_level">40</set>
 		<!-- long_tempban_max_duration : maximum ban duration that can be inflicted by admin of level below long_tempban_level -->
-		<set name="long_tempban_max_duration">3h</set>
+		<set name="long_tempban_max_duration">2w</set>
 		<!-- command_prefix : the prefix that should be put before b3 commands -->
 		<set name="command_prefix">!</set>
 		<!-- comamnd_prefix_loud : some commands can have their result broadcasted to the whole player crowed instead of only to 
